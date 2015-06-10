@@ -16,7 +16,7 @@ accumulateSublist' (l:ls) all@(i:is) c
 -- determines if a game is over
 winnerOfBoard :: [Char] -> Char -> Bool
 winnerOfBoard b p =
-    any (== True) (map ((all (== p)) . (accumulateSublist b)) rows)
+    any (== True) $ map ((all (== p)) . (accumulateSublist b)) rows
     where rows = [[1,2,3], [4,5,6], 
                   [7,8,9], [1,4,7], 
                   [2,5,8], [3,6,9], 
