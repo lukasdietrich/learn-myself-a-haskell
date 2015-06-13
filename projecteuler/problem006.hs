@@ -7,4 +7,5 @@ sumSquare ns = (sum ns) ^ 2
 diffSquareSum :: [Int] -> Int
 diffSquareSum ns = (sumSquare ns) - (squareSum ns)
 
+main :: IO ()
 main = print $ diffSquareSum [1..100]
